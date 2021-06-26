@@ -19,43 +19,43 @@
                 </div>
             </div>
             <div class="row align-items-center" style="width: 100%;">
-                <div class="col"><input id ="engine1-text" type="number" min="0" max="180" style="margin-left: 70%"></div>
-                <div class="col"><input id ="engine1" class="form-range" type="range" min="0" max="180" value="0"></div>
+                <div class="col"><input id ="engine1-text" type="number" min="0" max="180" style="margin-left: 70%" value={{$engine[0]->value}}></div>
+                <div class="col"><input id ="engine1" class="form-range" type="range" min="0" max="180" value={{$engine[0]->value}}></div>
                 <div class="col">
                     <h1 style="color: rgb(255,255,255); margin-right: 60%">engine1</h1>
                 </div>
             </div>
             <div class="row align-items-center" style="width: 100%;">
-                <div class="col"><input id ="engine2-text" type="number" min="0" max="180" style="margin-left: 70%"></div>
-                <div class="col"><input id ="engine2" class="form-range" type="range" min="0" max="180" value="0"></div>
+                <div class="col"><input id ="engine2-text" type="number" min="0" max="180" style="margin-left: 70%" value={{$engine[1]->value}}></div>
+                <div class="col"><input id ="engine2" class="form-range" type="range" min="0" max="180" value={{$engine[1]->value}}></div>
                 <div class="col">
                     <h1 style="color: rgb(255,255,255); margin-right: 60%">engine2</h1>
                 </div>
             </div>
             <div class="row align-items-center" style="width: 100%;">
-                <div class="col"><input id ="engine3-text" type="number" min="0" max="180" style="margin-left: 70%"></div>
-                <div class="col"><input id ="engine3" class="form-range" type="range" min="0" max="180" value="0"></div>
+                <div class="col"><input id ="engine3-text" type="number" min="0" max="180" style="margin-left: 70%" value={{$engine[2]->value}}></div>
+                <div class="col"><input id ="engine3" class="form-range" type="range" min="0" max="180" value={{$engine[2]->value}}></div>
                 <div class="col">
                     <h1 style="color: rgb(255,255,255); margin-right: 60%">engine3</h1>
                 </div>
             </div>
             <div class="row align-items-center" style="width: 100%;">
-                <div class="col"><input id ="engine4-text" type="number" min="0" max="180" style="margin-left: 70%"></div>
-                <div class="col"><input id ="engine4" class="form-range" type="range" min="0" max="180" value="0"></div>
+                <div class="col"><input id ="engine4-text" type="number" min="0" max="180" style="margin-left: 70%" value={{$engine[3]->value}}></div>
+                <div class="col"><input id ="engine4" class="form-range" type="range" min="0" max="180" value={{$engine[3]->value}}></div>
                 <div class="col">
                     <h1 style="color: rgb(255,255,255); margin-right: 60%">engine4</h1>
                 </div>
             </div>
             <div class="row align-items-center" style="width: 100%;">
-                <div class="col"><input id ="engine5-text" type="number" min="0" max="180" style="margin-left: 70%"></div>
-                <div class="col"><input id ="engine5" class="form-range" type="range" min="0" max="180" value="0"></div>
+                <div class="col"><input id ="engine5-text" type="number" min="0" max="180" style="margin-left: 70%" value={{$engine[4]->value}}></div>
+                <div class="col"><input id ="engine5" class="form-range" type="range" min="0" max="180" value={{$engine[4]->value}}></div>
                 <div class="col">
                     <h1 style="color: rgb(255,255,255); margin-right: 60%">engine5</h1>
                 </div>
             </div>
             <div class="row align-items-center" style="width: 100%;">
-                <div class="col"><input id ="engine6-text" type="number" min="0" max="180" style="margin-left: 70%"></div>
-                <div class="col"><input id ="engine6" class="form-range sl" type="range" min="0" max="180" value="0"></div>
+                <div class="col"><input id ="engine6-text" type="number" min="0" max="180" style="margin-left: 70%" value={{$engine[5]->value}}></div>
+                <div class="col"><input id ="engine6" class="form-range sl" type="range" min="0" max="180" value={{$engine[5]->value}}></div>
                 <div class="col">
                     <h1 style="color: rgb(255,255,255); margin-right: 60%">engine6</h1>
                 </div>
