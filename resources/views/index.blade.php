@@ -13,6 +13,9 @@
 <body style="width: 100%;height: 100%;">
     <div style="background: url(&quot;assets/img/—Pngtree—smart%20robot%20palm%20advertising%20background_979721.jpg&quot;);width: 100%;height: 100%;">
         <div class="text-center" style="height: 100%;width: 100%;">
+
+        <form action="{{ route('save')}}" method="POST">
+            @csrf
             <div class="row" style="width: 100%;">
                 <div class="col" style="margin-top: 154px;">
                     <h1 style="color: rgb(255,255,255);">Control Panel</h1>
@@ -20,48 +23,56 @@
             </div>
             <div class="row align-items-center" style="width: 100%;">
                 <div class="col"><input id ="engine1-text" type="number" min="0" max="180" style="margin-left: 70%" value={{$engine[0]->value}}></div>
-                <div class="col"><input id ="engine1" class="form-range" type="range" min="0" max="180" value={{$engine[0]->value}}></div>
+                <div class="col"><input id ="engine1" name="engine1" class="form-range" type="range" min="0" max="180" value={{$engine[0]->value}}></div>
                 <div class="col">
                     <h1 style="color: rgb(255,255,255); margin-right: 60%">engine1</h1>
                 </div>
             </div>
             <div class="row align-items-center" style="width: 100%;">
                 <div class="col"><input id ="engine2-text" type="number" min="0" max="180" style="margin-left: 70%" value={{$engine[1]->value}}></div>
-                <div class="col"><input id ="engine2" class="form-range" type="range" min="0" max="180" value={{$engine[1]->value}}></div>
+                <div class="col"><input id ="engine2" name="engine2" class="form-range" type="range" min="0" max="180" value={{$engine[1]->value}}></div>
                 <div class="col">
                     <h1 style="color: rgb(255,255,255); margin-right: 60%">engine2</h1>
                 </div>
             </div>
             <div class="row align-items-center" style="width: 100%;">
                 <div class="col"><input id ="engine3-text" type="number" min="0" max="180" style="margin-left: 70%" value={{$engine[2]->value}}></div>
-                <div class="col"><input id ="engine3" class="form-range" type="range" min="0" max="180" value={{$engine[2]->value}}></div>
+                <div class="col"><input id ="engine3" name="engine3" class="form-range" type="range" min="0" max="180" value={{$engine[2]->value}}></div>
                 <div class="col">
                     <h1 style="color: rgb(255,255,255); margin-right: 60%">engine3</h1>
                 </div>
             </div>
             <div class="row align-items-center" style="width: 100%;">
                 <div class="col"><input id ="engine4-text" type="number" min="0" max="180" style="margin-left: 70%" value={{$engine[3]->value}}></div>
-                <div class="col"><input id ="engine4" class="form-range" type="range" min="0" max="180" value={{$engine[3]->value}}></div>
+                <div class="col"><input id ="engine4" name="engine4" class="form-range" type="range" min="0" max="180" value={{$engine[3]->value}}></div>
                 <div class="col">
                     <h1 style="color: rgb(255,255,255); margin-right: 60%">engine4</h1>
                 </div>
             </div>
             <div class="row align-items-center" style="width: 100%;">
                 <div class="col"><input id ="engine5-text" type="number" min="0" max="180" style="margin-left: 70%" value={{$engine[4]->value}}></div>
-                <div class="col"><input id ="engine5" class="form-range" type="range" min="0" max="180" value={{$engine[4]->value}}></div>
+                <div class="col"><input id ="engine5" name="engine5" class="form-range" type="range" min="0" max="180" value={{$engine[4]->value}}></div>
                 <div class="col">
                     <h1 style="color: rgb(255,255,255); margin-right: 60%">engine5</h1>
                 </div>
             </div>
             <div class="row align-items-center" style="width: 100%;">
                 <div class="col"><input id ="engine6-text" type="number" min="0" max="180" style="margin-left: 70%" value={{$engine[5]->value}}></div>
-                <div class="col"><input id ="engine6" class="form-range sl" type="range" min="0" max="180" value={{$engine[5]->value}}></div>
+                <div class="col"><input id ="engine6" name="engine6" class="form-range sl" type="range" min="0" max="180" value={{$engine[5]->value}}></div>
                 <div class="col">
                     <h1 style="color: rgb(255,255,255); margin-right: 60%">engine6</h1>
                 </div>
             </div>
-            <button class="btn btn-primary" type="button" style="margin: 0px;margin-right: 50px;">save</button>
-            <button class="btn btn-primary" type="button">turn on</button>
+            <button type="Submit" class="btn btn-primary" >save</button>
+            </form>
+            <form action="{{ route('turn_on')}}" method="POST">
+            @csrf
+            @if($engine[0]->on == 0)
+            <button class="btn btn-primary" type="Submit" style="margin-top: 10px;">turn on</button>
+            @elseif($engine[0]->on == 1)
+            <button class="btn btn-primary" type="Submit" style="margin-top: 10px;">turn off</button>
+            @endif
+            </form>
         </div>
     </div>
     <script src="assets/js/jquery.min.js"></script>

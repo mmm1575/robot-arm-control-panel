@@ -22,4 +22,8 @@ use App\Http\Controllers\enginesController;
 // Route::get('/home', function () {
 //     return view('index');
 // });
-Route::get('/', [enginesController::class, 'start']);
+Route::get('/', [enginesController::class, 'start'])->name('/');
+
+Route::post('/', [enginesController::class, 'save'])->name('save');
+
+Route::post('/f', [enginesController::class, 'turn_on'])->name('turn_on');
